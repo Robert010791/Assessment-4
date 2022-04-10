@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "resourceName": "w3 schools",
+    "linkURL": "https://www.w3schools.com/"
+  },
+
+  {
+    "id": 2,
+    "resourceName": "Mozilla Developer Network",
+    "linkURL": "https://developer.mozilla.org/en-US/"
+  },
+
+  {
+    "id": 3,
+    "resourceName": "Stack Overflow",
+    "linkURL": "https://stackoverflow.com/"
+  }
+]

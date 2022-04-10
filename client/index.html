@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back End Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="container">
+
+    <div class="main-div">
+
+      <div class="button-div" id="alert-btns">
+        <button class="alerts" id="complimentButton">Get a compliment</button>
+        <button class="alerts" id="fortuneButton">Get your fortune</button>
+      </div>
+      
+      <div class="button-div"id="music-div">
+        <button id="videoButton">Get a motivational song!</button>
+        <div class="video-container"></div>
+      </div>
+      
+      <div class="button-div" id="resource-div">
+        <button id="resourceButton">Check out these resources!</button>
+        <div class="resource-links"></div>
+        <form id="resource-form">
+          <h3>Add one of your resources!</h3>
+          
+          <input 
+          type="text"
+          id="link-name"
+          placeholder="Name of your resource"/>
+
+          <input
+          type="text"
+          id="link-url"
+          placeholder="Paste your URL here"/>
+
+          <button class="submitBtn">Submit</button>
+        </form>
+      </div>
+
+    </div>
+      
+
+ 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById('complimentButton').onclick = function () {
+        axios
+          .get('http://localhost:4000/api/compliment/')
+          .then(function (response) {
+            const data = response.data;
+            alert(data);
+          });
+      };
+
+    </script>
+    <script src="main.js"></script>
+    </body>
+  </body>
